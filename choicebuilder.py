@@ -31,6 +31,26 @@ for i in state_choices[::-1]:
       str1+=i
       co+=1 
 print(str1[::-1])
+temp=str1[::-1]
+temp=temp.replace(",","=")
+temp=temp.replace("(","")
+temp=temp.replace(")","")
+c=0
+temps=""
+for i in temp:
+    if(i=='='):
+        c+=1
+        if(c%2==0):
+            temps+'\n'
+        else:
+            temps+=i
+    else:
+        temps+=i
+print(temps)
+        
+        
+    
+
 
 
 
